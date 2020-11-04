@@ -1,21 +1,23 @@
-const h = document.getElementById("hh");
+const title = document.getElementById("title");
 
-h.innerHTML = "Hi! From JS"; 
-h.style.color = "#2c2c2c";
+const BASE_COLOR = 'white';
+const OTHER_COLOR = 'purple';
 
-document.title = "hey there";
-/* 우리가 배울 모든 함수들은 우리가 찾게 될 모든 객체들의 함수들을
-DOM(Document OBject Model)형태로 변경 가능하다.*/
 
-function handleResize(){
-   console.log("I have been resized");
-}
 
 function handleColor(){
-    h.style.color = 'blue';
+    const currentColor = title.style.color;
+    if(BASE_COLOR === currentColor){
+           title.style.color = OTHER_COLOR;
+    }else{
+          title.style.color = BASE_COLOR;
+    }
+
 }
 
-window.addEventListener("resize", handleResize);
+function init(){
+    title.style.color = BASE_COLOR;
+    title.addEventListener("click", handleColor);
+}
 
-
-h.addEventListener("click", handleColor);
+init();
