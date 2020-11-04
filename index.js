@@ -11,4 +11,11 @@ function handleResize(){
    console.log("I have been resized");
 }
 
+function handleColor(){
+    h.style.color = 'blue';
+}
+
 window.addEventListener("resize", handleResize);
+
+
+h.addEventListener("click", handleColor);
