@@ -1,23 +1,19 @@
 const title = document.getElementById("title");
 
-const BASE_COLOR = 'white';
-const OTHER_COLOR = 'purple';
+const CLICKED_CLASS = "clicked"
 
 
-
-function handleColor(){
-    const currentColor = title.style.color;
-    if(BASE_COLOR === currentColor){
-           title.style.color = OTHER_COLOR;
-    }else{
-          title.style.color = BASE_COLOR;
-    }
-
+function handleClickColor(){
+  const currentClass = title.className;
+  if(currentClass !== CLICKED_CLASS){
+      title.className = CLICKED_CLASS
+  }else{
+      title.className = "";
+  }
 }
 
-function init(){
-    title.style.color = BASE_COLOR;
-    title.addEventListener("click", handleColor);
-}
 
-init();
+
+
+
+title.addEventListener("click", handleClickColor);
