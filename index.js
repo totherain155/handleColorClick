@@ -1,19 +1,16 @@
 const title = document.getElementById("title");
 
-const CLICKED_CLASS = "clicked"
+const CLICKED_CLASS = "clicked";
 
 
 function handleClickColor(){
-  const currentClass = title.className;
-  if(currentClass !== CLICKED_CLASS){
-      title.className = CLICKED_CLASS
-  }else{
-      title.className = "";
-  }
+ const hasClass =  title.classList.contains(CLICKED_CLASS);
+    if(hasClass){
+        title.classList.remove(CLICKED_CLASS);
+    }else{
+        title.classList.add(CLICKED_CLASS);
+    }
 }
-
-
-
 
 
 title.addEventListener("click", handleClickColor);

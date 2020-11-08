@@ -1,7 +1,12 @@
 body {
-    background-color:peru;
+    background-color: #0984e3;
+}
+
+.btn{
+   cursor: pointer;
 }
 
 .clicked{
-    color:purple;
+    transition: .7s ease-in-out;
+    color:#00b894;
 }
